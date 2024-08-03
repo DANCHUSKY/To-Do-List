@@ -1,8 +1,8 @@
-
+import boards
 
 def main_menu():
     while True:
-        print("\n--- TO-DO List  ---")
+        print("\n--- Trello en Terminal ---")
         print("1. Crear Tablero")
         print("2. Listar Tableros")
         print("3. Eliminar Tablero")
@@ -17,13 +17,12 @@ def main_menu():
 
         if choice == '1':
             name = input("Nombre del tablero: ")
-
+            boards.create_board(name)
         elif choice == '2':
-            print("Listado de Tableros: ")
-
+            boards.list_boards()
         elif choice == '3':
             board_id = input("ID del tablero a eliminar: ")
-
+            boards.delete_board(board_id)
         elif choice == '4':
             board_id = input("ID del tablero: ")
             name = input("Nombre de la lista: ")
