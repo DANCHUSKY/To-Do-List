@@ -51,4 +51,6 @@ This project is a terminal-based task management application. It allows you to c
    git clone <https://github.com/DANCHUSKY/To-Do-List.git>
    cd <To-Do-List>
 
+TO-DO List
+![image](https://github.com/user-attachments/assets/3bc74832-fa5b-4a1e-8bcc-267395425a4d)
 
