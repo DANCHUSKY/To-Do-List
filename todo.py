@@ -1,8 +1,11 @@
+import boards
+import lists
+import cards
 
 
 def main_menu():
     while True:
-        print("\n--- TO-DO List  ---")
+        print("\n--- TO-DO List en Terminal ---")
         print("1. Crear Tablero")
         print("2. Listar Tableros")
         print("3. Eliminar Tablero")
@@ -17,36 +20,34 @@ def main_menu():
 
         if choice == '1':
             name = input("Nombre del tablero: ")
-
+            boards.create_board(name)
         elif choice == '2':
-            print("Listado de Tableros: ")
-
+            boards.list_boards()
         elif choice == '3':
             board_id = input("ID del tablero a eliminar: ")
-
+            boards.delete_board(board_id)
         elif choice == '4':
             board_id = input("ID del tablero: ")
             name = input("Nombre de la lista: ")
-
+            lists.create_list(name, board_id)
         elif choice == '5':
             board_id = input("ID del tablero: ")
-
+            lists.list_lists(board_id)
         elif choice == '6':
             list_id = input("ID de la lista a eliminar: ")
-
+            lists.delete_list(list_id)
         elif choice == '7':
             list_id = input("ID de la lista: ")
             title = input("Título de la tarjeta: ")
             description = input("Descripción de la tarjeta: ")
-
+            cards.create_card(title, description, list_id)
         elif choice == '8':
             list_id = input("ID de la lista: ")
-
+            cards.list_cards(list_id)
         elif choice == '9':
             card_id = input("ID de la tarjeta a eliminar: ")
-
+            cards.delete_card(card_id)
         elif choice == '0':
             break
         else:
             print("Opción no válida. Inténtalo de nuevo.")
-
